@@ -1,7 +1,10 @@
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.image import imread
-print("AADAaadadadadadadadadadadadaadadad")
-print("asdaw3d1231")
-img = imread("C:/Users/Administrator/Desktop/94a7c0a27255eb1fd4af2821f09d8634.png") # 读入图像（设定合适的路径！）
-plt.imshow(img)
+def sigmoid(x):
+ return 1 / (1 + np.exp(-x))
+x = np.arange(-5.0, 5.0, 0.1)
+y = sigmoid(x)
+plt.plot(x, y)
+plt.ylim(-0.1, 1.1) # 指定y轴的范围
 plt.show()
